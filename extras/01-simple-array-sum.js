@@ -35,7 +35,6 @@ let input = `6
 1 2 3 4 10 11`;
 
 function simpleArraySum(ar) {
-    let len = parseInt(ar.split('')[0]);
     let array = ar.split('\n')[1].split(' ');
     let sum = 0;
     for (let i = 0; i<array.length; i++) {
