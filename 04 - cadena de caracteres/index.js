@@ -20,7 +20,7 @@ let index = str.indexOf('l'); // 2
 // Substring is a method that returns a part of a string between two indexes
 let sub = str.substring(1, 4); // 'ell'
 
-// Slice is a method similar to Substring, but can accept negative indexes
+// Slice is a method similar to Substring, but can accept negative indexes 
 let sli = str.slice(1, 4); // 'ell'
 
 // Uppercase is a method that returns the string in uppercase
@@ -84,11 +84,11 @@ function isIsogram(str) {
 
 const mainFunction = (str) => {
     if(isIsogram(str)) {
-        console.log(`${str} Is an isogram`)
+        console.log(`\n${str} Is an isogram`)
     } else if (isPalindrome(str)) {
-        console.log(`${str} Is a palindrome`)
+        console.log(`\n${str} Is a palindrome`)
     } else {
-        console.log(`${str} Is nothing`)
+        console.log(`\n${str} Is nothing`)
     }
 }
 
