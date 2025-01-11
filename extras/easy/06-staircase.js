@@ -58,9 +58,11 @@ function staircase (n){
             } else {
                 process.stdout.write("#")
             }
+            process.stdout.write("#")
         }
-        console.log()
+        console.log("");
     }
 }
 
 staircase(6);
+staircase(4);
