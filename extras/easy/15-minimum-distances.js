@@ -46,35 +46,72 @@ There are two pairs to consider:
 The answer is min(3,5) =3.
 */
 
+// let a = [1, 2, 1, 2, 1];
+
+
+// function minimumDistances(a) {
+//   let duplicates = {};
+//   let min = Infinity;
+
+//   console.log(min == false)
+
+//   for (let i = 0; i < a.length; i++) {
+//     if (!duplicates[a[i]]) {
+//       duplicates[a[i]] = [];
+//     }
+//     duplicates[a[i]].push(i);
+//   }
+
+
+//   for (let key in duplicates) {
+//     let indices = duplicates[key];
+//     if(indices.length >= 2) {
+//         for(let j=1; j<indices.length; j++) {
+//             let distance = indices[j] - indices[j-1];
+//             if(distance < min) {
+//                 min = distance;
+//             }
+//         }
+//     }
+//   }
+//   return min === Infinity ? -1 : min;
+// }
+
+// console.log(minimumDistances(a));
+
+
+
+
 let a = [1, 2, 1, 2, 1];
 
+function minimumDistances (a) {
+    let duplicates = {};
+    let min = Infinity;
 
-function minimumDistances(a) {
-  let duplicates = {};
-  let min = Infinity;
-
-  console.log(min == false)
-
-  for (let i = 0; i < a.length; i++) {
-    if (!duplicates[a[i]]) {
-      duplicates[a[i]] = [];
+    for (let i = 0; i<a.length; i++) {
+        if(!duplicates[a[i]]) {
+            duplicates[a[i]] =[];
+        }
+        duplicates[a[i]].push(i);
     }
-    duplicates[a[i]].push(i);
-  }
 
-
-  for (let key in duplicates) {
-    let indices = duplicates[key];
-    if(indices.length >= 2) {
-        for(let j=1; j<indices.length; j++) {
-            let distance = indices[j] - indices[j-1];
-            if(distance < min) {
-                min = distance;
+    for(let key in duplicates) {
+        let positions = duplicates[key];
+        if(positions.length >= 2) {
+            for(let i=1; i<positions.length; i++){
+                if(positions[i]-positions[i-1] < min) {
+                    min = positions[i]-positions[i-1];
+                }
             }
         }
     }
-  }
-  return min === Infinity ? -1 : min;
+
+    return min == Infinity ? -1: min;
+
 }
 
-console.log(minimumDistances(a));
+console.log(minimumDistances([3, 5, 1, 2, 4]));
+// console.log(minimumDistances([7, 1, 3, 4, 1, 7]));
+// console.log(minimumDistances([1, 2, 3, 4, 5]));
+// console.log(minimumDistances([1, 0, 1, 0, 1, 0, 1]));
+// console.log(minimumDistances([5, 5, 5, 5, 5]));
