@@ -114,6 +114,7 @@ The answer is min(3,5) =3.
 function minimumDistances(arr) {
   let pairs = {};
   let min = Infinity;
+  
   for (let i = 0; i < arr.length; i++) {
     if (pairs[arr[i]]) {
       pairs[arr[i]].push(i);
