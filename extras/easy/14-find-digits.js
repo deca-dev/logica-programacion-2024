@@ -80,20 +80,38 @@ The number 1012 is broken into four digits, 1, 0, 1, and 2. 1012 is evenly divis
 
 // findDigits(a);
 
-const findDigits2 = (n) => {
+// const findDigits2 = (n) => {
 
-  let count = 0;
-  let arr = n.toString().split('');;
+//   let count = 0;
+//   let arr = n.toString().split('');;
 
-  for(let i of arr) {
-    if(n%i == 0) {
-        count++;
-    } 
+//   for(let i of arr) {
+//     if(n%i == 0) {
+//         count++;
+//     } 
+//   }
+// return count;
+
+// };
+
+// console.log(findDigits2(1012));
+
+
+function fingDigits(num) {
+
+  let number2String = num.toString().split('');
+  let counter = 0;
+
+  for(let i=0; i<number2String.length; i++) {
+    if(num%parseInt(number2String[i]) == 0) {
+      counter++;
+    }
   }
-return count;
 
-};
+  return counter;
+}
 
-console.log(findDigits2(1012));
-
-
+console.log(fingDigits(12));
+console.log(fingDigits(1012));
+console.log(fingDigits(111));
+console.log(fingDigits(124));
