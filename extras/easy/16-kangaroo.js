@@ -77,9 +77,28 @@ function kangaroo(x1,v1, x2, v2) {
     return coincidence ? "YES": "NO"
 }
 
-
-
-
 console.log(kangaroo(0,2,0,1));
-// console.log(kangaroo(2,5,7,1));
-// console.log(kangaroo(0,2,5,3));
+console.log(kangaroo(2,5,7,1));
+console.log(kangaroo(0,2,5,3));
+
+function kangaroo2(x1,v1,x2,v2) {
+    let k1 =x1;
+    let k2 = x2;
+    let space = false;
+    for(let i=0; i<1000; i++) {
+        k1+=v1;
+        k2+=v2;
+        if(k1==k2) {
+            space = true;
+            break;
+        }
+    }
+
+    return space == true ? "YES" : "NO";
+}
+
+console.log(kangaroo2(0,2,0,1));
+console.log(kangaroo2(2,5,7,1));
+console.log(kangaroo2(0,2,5,3));
+console.log(kangaroo2(2,1,1,2));
+console.log(kangaroo2(0,3,4,2));
