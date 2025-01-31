@@ -73,10 +73,9 @@ const getTotalX = (a, b) => {
   let resultArray = [];
   let finalArray = [];
 
-
   for (let i = 1; i <= b[0]; i++) {
-      if (a.every(num => i % num === 0)) {
-        resultArray.push(i);
+    if (a.every((num) => i % num === 0)) {
+      resultArray.push(i);
     }
   }
   console.log(resultArray);
@@ -85,14 +84,13 @@ const getTotalX = (a, b) => {
 
   console.log(firstUniqueArray);
 
-
   for (let i = 0; i < firstUniqueArray.length; i++) {
-      if (b.every(num => num % firstUniqueArray[i] === 0)) {
-        finalArray.push(firstUniqueArray[i]);
+    if (b.every((num) => num % firstUniqueArray[i] === 0)) {
+      finalArray.push(firstUniqueArray[i]);
     }
   }
 
-  console.log(finalArray)
+  console.log(finalArray);
 
   const uniqueArray = [...new Set(finalArray)];
 
@@ -102,4 +100,8 @@ const getTotalX = (a, b) => {
 };
 
 console.log(getTotalX([2, 6], [24, 36]));
-console.log(getTotalX([ 2, 4 ] ,[ 16, 32, 96 ]));
+console.log(getTotalX([2, 4], [16, 32, 96]));
+
+
+// ============================================
+
