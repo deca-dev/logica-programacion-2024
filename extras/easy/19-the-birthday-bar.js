@@ -77,6 +77,9 @@ Sample Output 2
 Explanation 2
 
 Lily only wants to give Ron  square of chocolate with an integer value of . Because the only square of chocolate in the bar satisfies this constraint, we print  as our answer.
+
+d - Ron's day birthday (segments sum this)
+m - Ron's month (max length)
 */
 
 function birthday(s, d, m) {
@@ -94,25 +97,6 @@ function birthday(s, d, m) {
 
   return count;
 }
-
-
-function birthday1(s,d,m) {
-  let sum = 0;
-  let count = 0;
-  for(let i=0; i<=s.length-m; i++) {
-    sum += s[i] + s[i+1];
-    if(sum == d) {
-      count++
-    }
-    sum = 0;
-  }
- 
-  return count;
-}
-
-console.log(birthday1([1, 2, 1, 3, 2], 3, 2));
-console.log(birthday1([1, 1, 1, 1, 1, 1], 3, 2));
-console.log(birthday1([4, 1], 4, 1));
 
 
 console.log(birthday([1, 2, 1, 3, 2], 3, 2));
