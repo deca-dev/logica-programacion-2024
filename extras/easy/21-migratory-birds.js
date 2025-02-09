@@ -66,6 +66,7 @@ function migratoryBirds(arr) {
     let repetitveTypes = [];
     let maxRepetitive = -Infinity;
     let result = Infinity;
+    
     for(let i =0; i < arr.length; i++) {
         if(!birdsTypes[arr[i]]) {
             birdsTypes[arr[i]] =1;
