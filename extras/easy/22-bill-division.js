@@ -60,7 +60,6 @@ the cost per person is bactual = 14. Because  bactual = bcharget =7, we print Bo
 function bonAppetit(bill, k, b) {
 
    let sharedAccount = 0;
-   let annaAccount =0;
 
    for(let i = 0; i<bill.length; i++) {
     if(i != k) {
